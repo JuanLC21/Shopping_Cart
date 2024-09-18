@@ -1,0 +1,14 @@
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color: azure;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 2rem;
+}
+.main_title{
+    text-align: center;
+}

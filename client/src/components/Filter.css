@@ -1,0 +1,32 @@
+section{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+label{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: azure;
+}
+select{
+    width: 8rem ;
+    font-family: "Noto Sans", sans-serif;
+    text-align: center;
+    margin: 0 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #32C88D;
+}
+option{
+    font-weight: 600;
+}
+input{
+    margin: 0 1rem;
+    cursor: pointer;
+}
+span{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.2rem;
+    color: #32C88D;
+}
