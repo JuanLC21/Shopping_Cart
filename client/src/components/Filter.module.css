@@ -1,0 +1,62 @@
+section{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+label{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: azure;
+}
+input{
+    margin: 0 1rem;
+    cursor: pointer;
+}
+span{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.2rem;
+    color: #32C88D;
+}
+.range_price{
+    accent-color: #32C88D;
+}
+.whole_category{
+    width: 15rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn_category{
+    width: 8.5rem ;
+    height: 2rem;
+    font-family: "Noto Sans", sans-serif;
+    text-align: center;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #32C88D;
+}
+.menu_option{
+    width: 8.5rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #000;
+}
+.menu_option_hidden{
+    display: none;
+}
+.btn_option{
+    height: 2rem;
+    margin: 1px 0;
+    border: none;
+    font-family: "Noto Sans", sans-serif;
+    background-color: #32C88D;
+}
+.btn_option:hover{
+    background-color: aquamarine;
+}

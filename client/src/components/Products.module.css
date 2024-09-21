@@ -1,5 +1,6 @@
 body{
-    background-color: #434343;
+    /* background-color: #434343;*/
+    background-color: #252927;
 }
 .main_products{
     width: 100vw;
@@ -17,7 +18,7 @@ body{
     border: 4px solid #010101;
     border-radius: 10px;
     background: rgb(23,40,35);
-background: linear-gradient(305deg, rgba(23,40,35,1) 10%, rgba(50,200,141,1) 50%, rgba(206,238,244,1) 85%);
+    background: linear-gradient(305deg, rgba(23,40,35,1) 10%, rgba(50,200,141,1) 50%, rgba(206,238,244,1) 85%);
 }
 ul{
     display: flex;
