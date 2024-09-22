@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react'
 import { FilterContext } from '../App'
+import { ButtonOption } from './Button'
 import style from './Filter.module.css'
 
 export function Filter () {
@@ -13,12 +14,13 @@ export function Filter () {
         setFilters(prevState => ({ ...prevState, price: ev.target.value })) // Alternativa para actualizar el estado sin necesidad de utilizar la variable.
         setNumber(ev.target.value)
     }
-    function handleChangeCategory (ev) {
-        setFilters({ ...filters, category: ev.target.value })
-        setCategories(ev.target.value)
-        setChange(style.menu_option_hidden)
-    }
+    // function handleChangeCategory (ev) {
+    //     setFilters({ ...filters, category: ev.target.value })
+    //     setCategories(ev.target.value)
+    //     setChange(style.menu_option_hidden)
+    // }
     function handleChange () { setChange(change === style.menu_option_hidden ? style.menu_option : style.menu_option_hidden) }
+    const newSet = { setCategories, handleChange }
     return (
         <section>
             <div>
@@ -31,12 +33,12 @@ export function Filter () {
                 <div>
                     <button className={ style.btn_category} onClick={ handleChange }>{ categories }</button>
                     <div className={ change }>
-                        <button className={ style.btn_option } onClick={ handleChangeCategory } value="All">All</button>
-                        <button className={ style.btn_option } onClick={ handleChangeCategory } value="Shoes">Shoes</button>
-                        <button className={ style.btn_option } onClick={ handleChangeCategory } value="Clothes">Clothes</button>
-                        <button className={ style.btn_option } onClick={ handleChangeCategory } value="Furniture">Furniture</button>
-                        <button className={ style.btn_option } onClick={ handleChangeCategory } value="Electronics">Electronics</button>
-                        <button className={ style.btn_option } onClick={ handleChangeCategory } value="Miscellaneous">Miscellaneous</button>
+                        <ButtonOption newState={newSet}>All</ButtonOption>
+                        <ButtonOption newState={newSet}>Shoes</ButtonOption>
+                        <ButtonOption newState={newSet}>Clothes</ButtonOption>
+                        <ButtonOption newState={newSet}>Furniture</ButtonOption>
+                        <ButtonOption newState={newSet}>Electronics</ButtonOption>
+                        <ButtonOption newState={newSet}>Miscellaneous</ButtonOption>
                     </div>
                 </div>
             </div>

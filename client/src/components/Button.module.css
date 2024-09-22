@@ -1,0 +1,14 @@
+.btn_option{
+    height: 2rem;
+    margin: 1px 0;
+    border: none;
+    font-family: "Noto Sans", sans-serif;
+    cursor: pointer;
+    background-color: #32C88D;
+}
+.btn_option:hover{
+    background-color: aquamarine;
+}
+.btn_option_hide{
+    height: 0;
+}

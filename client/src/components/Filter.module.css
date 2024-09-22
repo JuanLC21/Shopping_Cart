@@ -50,13 +50,3 @@ span{
 .menu_option_hidden{
     display: none;
 }
-.btn_option{
-    height: 2rem;
-    margin: 1px 0;
-    border: none;
-    font-family: "Noto Sans", sans-serif;
-    background-color: #32C88D;
-}
-.btn_option:hover{
-    background-color: aquamarine;
-}
