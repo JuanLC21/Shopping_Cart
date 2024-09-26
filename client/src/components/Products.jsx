@@ -45,7 +45,7 @@ export function Products ({ products }) {
                             <h3 className={ style.title }>{ product.title }</h3>
                             <img className={ style.thumbnail } src={ product.images[0] } alt={ product.description } />
                             <strong className={ style.price }>{ product.price }$</strong>
-                            <button id={ product.id } className={ style.buy } onClick={ handleAddItem }>Add</button>
+                            <button id={ product.id } className={ style.add} onClick={ handleAddItem }>Add</button>
                         </li>
                     ))
                 }

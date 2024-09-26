@@ -12,8 +12,8 @@ function Counter ({ price }) {
             <div className={ style.add_cart }>
                 <span className={ style.quantity_cart }><strong>Quantity:</strong>{qty}</span>
                 <div className={ style.quantity_buttons}>
-                    <button className={style.btn_quantity} onClick={() => setQty(qty - 1)}><Minus/></button>
                     <button className={style.btn_quantity} onClick={() => setQty(qty + 1)}><Plus/></button>
+                    <button className={style.btn_quantity} onClick={() => setQty(qty - 1)}><Minus/></button>
                 </div>
             </div>
         </>
@@ -37,7 +37,7 @@ export function Cart ({ item1, removeItem, buyItem }) {
                             <Counter price={product1.price}/>
                             <div className={ style.buy_remove}>
                                 <button id={product1.id} className={style.btn_buy} onClick={buyItem}>Buy</button>
-                                <button id={product1.id} className={style.btn2_cart} onClick={removeItem}>Remove</button>
+                                <button id={product1.id} className={style.btn_remove} onClick={removeItem}>Remove</button>
                             </div>
                         </article>
                     ))

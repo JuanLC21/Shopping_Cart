@@ -22,16 +22,16 @@ export function Filter () {
     function handleChange () { setChange(change === style.menu_option_hidden ? style.menu_option : style.menu_option_hidden) }
     const newSet = { setCategories, handleChange }
     return (
-        <section>
-            <div>
-                <label htmlFor="price">Price since:</label>
-                <input className={ style.range_price} type="range" id="price" min={ 0 } max={ 90 } value={ filters.price } onChange={ handleChangePrice }/>
+        <section className={style.filters}>
+            <div className={style.whole_price}>
+                <label htmlFor="price">Price</label>
+                <input className={style.range_price} type="range" id="price" min={0} max={90} value={filters.price} onChange={handleChangePrice}/>
                 <span>{ number }$</span>
             </div>
             <div className={ style.whole_category }>
-                <label htmlFor="category">Category:</label>
-                <div>
-                    <button className={ style.btn_category} onClick={ handleChange }>{ categories }</button>
+                <label htmlFor="category">Category</label>
+                <div className={ style.category_container }>
+                    <button className={style.btn_category} onClick={handleChange}>{categories}</button>
                     <div className={ change }>
                         <ButtonOption newState={newSet}>All</ButtonOption>
                         <ButtonOption newState={newSet}>Shoes</ButtonOption>
