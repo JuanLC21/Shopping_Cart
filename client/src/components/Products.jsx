@@ -33,9 +33,9 @@ export function Products ({ products }) {
     }
     return (
         <main className={ style.main_products}>
-            <div className={ style.divCart }>
+            <div className={ style.div_cart }>
                 {
-                    items.length !== 0 ? <Cart item1={ items } removeItem={handleRemoveItem} buyItem={handleBuyItem}/> : null
+                    items.length !== 0 ? <Cart item1={items} removeItem={handleRemoveItem} buyItem={handleBuyItem}/> : null
                 }
             </div>
             <ul>
