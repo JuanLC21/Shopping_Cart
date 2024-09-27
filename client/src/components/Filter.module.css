@@ -35,6 +35,7 @@ span{
     width: 8.5rem ;
     height: 2rem;
     font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
     text-align: center;
     cursor: pointer;
     position: relative;

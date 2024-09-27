@@ -27,7 +27,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-left: 5px; */
     border-radius: 5px;
     border: 2px solid #fff;
     cursor: pointer;
@@ -127,6 +126,9 @@
     cursor: pointer;
     color: azure;
     background-color: #32C7BE;
+}
+.btn_buy:hover, .btn_remove:hover{
+    box-shadow: 0 0 5px #ddd, 0 0 10px #ddd, 0 0 20px #ddd;
 }
 @media (max-width: 639px) {
     .price_cart{
