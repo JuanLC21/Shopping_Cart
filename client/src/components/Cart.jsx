@@ -21,25 +21,27 @@ function Counter ({ price }) {
 export function Cart ({ item1, removeItem, buyItem }) {
     return (
         <>
-            <label htmlFor="checkBoxId" className={ style.btn_cart }>
+            <label htmlFor="checkBoxId" className={style.btn_cart}>
                 <Icon/>
             </label>
             <input type="checkbox" id='checkBoxId' hidden/>
-            <div className={ style.item_cart }>
-                {
-                // eslint-disable-next-line react/prop-types
-                    item1?.map((product1) => (
-                        <article key={ product1.id } className={style.article}>
-                            <h4 className={ style.title_cart}>{ product1.title }</h4>
-                            <img src={ product1.images[0] } alt={ product1.description } className={ style.img_cart }/>
-                            <Counter price={product1.price}/>
-                            <section className={ style.buy_remove}>
-                                <button id={product1.id} className={style.btn_buy} onClick={buyItem}>Buy</button>
-                                <button id={product1.id} className={style.btn_remove} onClick={removeItem}>Remove</button>
-                            </section>
-                        </article>
-                    ))
-                }
+            <div className={style.item_cart}>
+                <div className={style.item_cart_container}>
+                    {
+                    // eslint-disable-next-line react/prop-types
+                        item1?.map((product1) => (
+                            <article key={product1.id} className={style.article}>
+                                <h4 className={style.title_cart}>{product1.title}</h4>
+                                <img src={ product1.images[0] } alt={product1.description} className={style.img_cart}/>
+                                <Counter price={product1.price}/>
+                                <section className={style.buy_remove}>
+                                    <button id={product1.id} className={style.btn_buy} onClick={buyItem}>Buy</button>
+                                    <button id={product1.id} className={style.btn_remove} onClick={removeItem}>Remove</button>
+                                </section>
+                            </article>
+                        ))
+                    }
+                </div>
             </div>
         </>
     )

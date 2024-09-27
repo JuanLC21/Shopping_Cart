@@ -13,7 +13,7 @@
 .btn_option_hide{
     height: 0;
 }
-@media (max-width: 600px) {
+@media (max-width: 639px) {
     .btn_option{
         font-size: 0.8rem;
     }

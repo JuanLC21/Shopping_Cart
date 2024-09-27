@@ -10,7 +10,6 @@ label{
     color: azure;
 }
 input{
-    margin: 0 1rem;
     cursor: pointer;
 }
 span{
@@ -21,10 +20,10 @@ span{
 .range_price{
     accent-color: #32C88D;
 }
-.whole_category{
+.whole_price, .whole_category{
     width: 15rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 .category_container{
@@ -59,34 +58,22 @@ span{
 .menu_option_hidden{
     display: none;
 }
-
-@media (max-width: 600px) {
+@media (max-width: 639px) {
     .filters{
         height: 4rem;
         display: flex;
         align-items: flex-start;
-        /* outline: 2px solid #32C88D; */
     }
-    .whole_price{
+    .whole_price, .whole_category{
         height: 100%;
-        display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
-        /* outline: 2px solid yellow; */
     }
     .whole_price > label, .whole_category > label{
         font-size: 1rem;
     }
     .whole_price > span{
         font-size: 1rem;
-    }
-    .whole_category{
-        height: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        /* outline: 2px solid red; */
     }
     .btn_category{
         width: 7rem;
