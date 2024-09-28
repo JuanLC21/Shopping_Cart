@@ -25,3 +25,4 @@ dist-ssr
 .eslintrc.json
 README.md
 Usereducer no utilizado.txt
+.env

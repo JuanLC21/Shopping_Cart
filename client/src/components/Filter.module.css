@@ -51,7 +51,7 @@ span{
     overflow: hidden;
     position: absolute;
     z-index: 45;
-    transition: 0.5s ease-in height;
+    transition: 0.3s ease-in height;
 }
 .options_container_hidden{
     width: 8rem;
@@ -60,7 +60,7 @@ span{
     overflow: hidden;
     position: absolute;
     z-index: 45;
-    transition: 0.5s ease-out height;
+    transition: 0.3s ease-out height;
 }
 .menu_option{
     width: 100%;
