@@ -2,10 +2,10 @@ import { useState } from 'react'
 import { useFetch } from './useFetch.js'
 import { productsFiltered } from '../utils/fn_Filter.js'
 
-const PRODUCTS_END_POINT = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000/ecommerce/products/all'
+const PRODUCTS_END_POINT = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000'
 
 export function useFilter () {
-    const { products } = useFetch(PRODUCTS_END_POINT)
+    const { products } = useFetch(`${PRODUCTS_END_POINT}/ecommerce/products/all`)
     const [filters, setFilters] = useState({ price: 15, category: 'All' })
 
     const productsFilter = productsFiltered(products, filters)
