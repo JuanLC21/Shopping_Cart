@@ -6,7 +6,8 @@ import style from './Filter.module.css'
 export function Filter () {
     const { filters, setFilters } = useContext(FilterContext)
     const [number, setNumber] = useState(filters.price)
-    const [change, setChange] = useState(style.menu_option_hidden)
+    // const [change, setChange] = useState(style.menu_option_hidden)
+    const [change, setChange] = useState(style.options_container_hidden)
     const [categories, setCategories] = useState('All')
 
     function handleChangePrice (ev) {
@@ -14,12 +15,7 @@ export function Filter () {
         setFilters(prevState => ({ ...prevState, price: ev.target.value })) // Alternativa para actualizar el estado sin necesidad de utilizar la variable.
         setNumber(ev.target.value)
     }
-    // function handleChangeCategory (ev) {
-    //     setFilters({ ...filters, category: ev.target.value })
-    //     setCategories(ev.target.value)
-    //     setChange(style.menu_option_hidden)
-    // }
-    function handleChange () { setChange(change === style.menu_option_hidden ? style.menu_option : style.menu_option_hidden) }
+    function handleChange () { setChange(change === style.options_container_hidden ? style.options_container : style.options_container_hidden) }
     const newSet = { setCategories, handleChange }
     return (
         <section className={style.filters}>
@@ -32,13 +28,15 @@ export function Filter () {
                 <label htmlFor="category">Category</label>
                 <div className={ style.category_container }>
                     <button className={style.btn_category} onClick={handleChange}>{categories}</button>
-                    <div className={ change }>
-                        <ButtonOption newState={newSet}>All</ButtonOption>
-                        <ButtonOption newState={newSet}>Shoes</ButtonOption>
-                        <ButtonOption newState={newSet}>Clothes</ButtonOption>
-                        <ButtonOption newState={newSet}>Furniture</ButtonOption>
-                        <ButtonOption newState={newSet}>Electronics</ButtonOption>
-                        <ButtonOption newState={newSet}>Miscellaneous</ButtonOption>
+                    <div className={change}>
+                        <div className={style.menu_option}>
+                            <ButtonOption newState={newSet}>All</ButtonOption>
+                            <ButtonOption newState={newSet}>Shoes</ButtonOption>
+                            <ButtonOption newState={newSet}>Clothes</ButtonOption>
+                            <ButtonOption newState={newSet}>Furniture</ButtonOption>
+                            <ButtonOption newState={newSet}>Electronics</ButtonOption>
+                            <ButtonOption newState={newSet}>Miscellaneous</ButtonOption>
+                        </div>
                     </div>
                 </div>
             </div>
