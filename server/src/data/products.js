@@ -1,5 +1,7 @@
 import { promises as fs } from 'fs'
-export const PATH = './src/data/dataPlatzi.json'
+import path from 'path'
+
+export const PATH = path.join(__dirname, 'data/dataPlatzi.json')
 
 export async function dataProducts() {
     try {
