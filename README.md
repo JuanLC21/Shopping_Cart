@@ -38,4 +38,4 @@ de ese trabajo, arrojando resultado en los dos sistemas de medidas que actualmen
 
 Con el botón de la izquierda se cambia el tema de la aplicación. Con el botón derecho se cambia al sistema por 
 el cual se van hacer los calculos de potencia de un motor, dado que los calculos para hallar potencia difieren
-entre sitemas.
+entre sistemas.
